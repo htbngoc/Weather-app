@@ -1,0 +1,53 @@
+body {
+  background-image: url("https://lh5.googleusercontent.com/proxy/rRX1lWRu8_QRIKZikh2cu-z90TfV4TzJzA9c1ZzHE3ebb9qxly2jvUT99ie-lrOxP3KvmJeO7LKo5lOCz2g9NI99M1locs7IWeGX=w3840-h2160-p-k-no-nd-mv");
+  background-size: 1450px;
+}
+
+.container {
+  margin-top: 50px;
+  display: block;
+  width: 95%;
+  max-width: 500px;
+  background: white;
+  line-height: 40px;
+
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+.search-form {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+p {
+  margin: 10px auto;
+}
+
+.customs {
+  width: 50px;
+  margin: 0.2px auto;
+  transition: all 200ms ease-in-out;
+}
+
+.customs:hover {
+  background: burlywood;
+  cursor: pointer;
+}
+.favorite-cities {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.favorite {
+  margin-right: 5px;
+  text-decoration: none;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.link:hover {
+  text-decoration: underline;
+  color: green;
+}
