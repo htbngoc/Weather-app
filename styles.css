@@ -2,16 +2,14 @@ body {
   background-image: url("https://lh5.googleusercontent.com/proxy/rRX1lWRu8_QRIKZikh2cu-z90TfV4TzJzA9c1ZzHE3ebb9qxly2jvUT99ie-lrOxP3KvmJeO7LKo5lOCz2g9NI99M1locs7IWeGX=w3840-h2160-p-k-no-nd-mv");
 }
 
-.container {
+.content {
   display: block;
-  width: 95%;
-  max-width: 600px;
-
   background: white;
+  max-width: 600px;
   line-height: 50px;
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 16px;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 
 .favoriteCities {
@@ -62,4 +60,11 @@ p {
 .link:hover {
   text-decoration: underline;
   color: green;
+}
+
+.footer {
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  color: white;
 }
