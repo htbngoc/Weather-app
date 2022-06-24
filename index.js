@@ -20,10 +20,15 @@ let month = months[now.getMonth()];
 let year = now.getFullYear();
 h1.innerHTML = `${month} ${date}, ${year}`;
 
-function showTemperature(response) {
+function showTemperatureCurrent(response) {
+  console.log(response);
   let h3 = document.querySelector("#temperature");
-  let temperatureCelsius = Math.round(response.data.main.temp);
-  h3.innerHTML = temperatureCelsius;
+  h3.innerHTML = Math.round(response.data.main.temp);
+
+  document.querySelector("#city-Name").innerHTML = response.data.name;
+  document.querySelector("#country-Name").innerHTML = response.data.sys.country;
+  document.querySelector("#weather-condition").innerHTML =
+    response.data.weather[0].main;
 }
 
 function cityShow(event) {
@@ -39,25 +44,18 @@ function cityShow(event) {
     "&appid=" +
     apiKey +
     "&units=metric";
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showTemperatureCurrent);
 }
 
 let formCity = document.querySelector("#search-city");
 formCity.addEventListener("submit", cityShow);
 
-function showTemperatureCurrent(response) {
-  let h3 = document.querySelector("#temperature");
-  console.log(response);
-  h3.innerHTML = Math.round(response.data.main.temp);
-  document.querySelector("#city-Name").innerHTML = response.data.name;
-}
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  console.log(lat);
   let apiKey = "d61b6cb1e9c414063f1d5c545d36fd21";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-
+  console.log(apiUrl);
   axios.get(apiUrl).then(showTemperatureCurrent);
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Weather app</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -10,41 +10,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
+  
+</head>
 
   <body>
     <div class="container border border-3 border-success rounded p-3">
-      <div class="favorite-cities">
+      <div class="favoriteCities">
         <a href="" class="text-success favorite">Calgary</a>
         <a href="" class="text-success favorite">Paris</a>
         <a href="" class="text-success favorite">Beijing</a>
       </div>
-      <form class = "search-form" >
-      <div class="row" id = "search-city">
-        <div class="col-6" id = "city-Search">
-         
-            <input
-              class="form-control shadow-sm"
-              type="text"
-              placeholder="enter your city"
-              autofocus="on"
-              autocomplete="off"
-              id="city-Input"
-            />
-         
+      <form class = "search-form" id="search-city" >
+        <div class="row">
+          <div class="col-6" id = "city-search">
+           
+              <input
+                class="form-control shadow-sm"
+                type="text"
+                placeholder="enter your city"
+                autofocus="on"
+                autocomplete="off"
+                id="city-Input"
+              />
+           
+          </div>
+  
+          <div class="col-3">
+            <input class="form-control btn btn-success shadow-sm" type="submit" value="search" id="search-button" />
+          </div>
+          <div class="col-3">
+            <input class="form-control btn btn-success shadow-sm" type="submit" value="current" id="current-button"/>
+          </div>
+       
         </div>
-
-        <div class="col-3">
-          <input class="form-control btn btn-success shadow-sm" type="submit" value="search" id="search-button" />
-        </div>
-        <div class="col-3">
-          <input class="form-control btn btn-success shadow-sm" type="submit" value="current" id="current-button"/>
-        </div>
-     
-      </div>
-    </form>
+      </form>
       <p>
-        <div id="city-Name">City Name</div>
+        <div>
+        <span id="city-Name">City Name</span>,
+        <span id="country-Name">Country</span>
+        </div>
         Date: 
         <span id = "currentDate">May 28, 2022</span>
         
@@ -58,46 +62,52 @@
         <a href="# "class = "link" id = "fahrenheit-link">
           °F
         </a>
-        <br />
-        ☁️ Cloudy
+        <br /><span id="weather-condition">
+        ☁️ Cloudy</span>
       </p>
       <div class="row">
-        <div class="col-2 border border-1 border-danger rounded-5 customs">
+        <div class="col-2 border border-1 border-danger rounded-5 ">
           Sun
           <br />
           🌤
           <br />
           16°
         </div>
-        <div class="col-2 border border-1 border-warning rounded-5 customs">
+        <div class="col-2 border border-1 border-warning rounded-5 ">
           Mon
           <br />
           🌤
           <br />
           15°
         </div>
-        <div class="col-2 border border-1 border-success rounded-5 customs">
+        <div class="col-2 border border-1 border-success rounded-5 ">
           Tue
           <br />
           ⛅️
           <br />
           17°
         </div>
-        <div class="col-2 border border-1 border-info rounded-5 customs">
+        <div class="col-2 border border-1 border-info rounded-5 ">
           Wed
           <br />
           ☁️
           <br />
           17°
         </div>
-        <div class="col-2 border border-1 border-dark rounded-5 customs">
+        <div class="col-2 border border-1 border-dark rounded-5 ">
           Thu
           <br />
           🌧
           <br />
           17°
         </div>
-        
+        <div class="col-2 border border-1 border-dark rounded-5 ">
+          Fri
+          <br />
+          🌧
+          <br />
+          17°
+        </div>
       </div>
     </div>
     </div>
