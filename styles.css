@@ -1,5 +1,11 @@
 body {
-  background-image: url("https://lh5.googleusercontent.com/proxy/rRX1lWRu8_QRIKZikh2cu-z90TfV4TzJzA9c1ZzHE3ebb9qxly2jvUT99ie-lrOxP3KvmJeO7LKo5lOCz2g9NI99M1locs7IWeGX=w3840-h2160-p-k-no-nd-mv");
+  background: linear-gradient(
+    90deg,
+    rgb(52, 78, 65) 0%,
+    rgb(181, 201, 154) 100%
+  );
+  background-image: url(img/wave2.jpeg);
+  width: 100%;
 }
 
 .content {
@@ -66,5 +72,5 @@ p {
   font-weight: bold;
   text-align: center;
   font-size: 15px;
-  color: white;
+  color: black;
 }
