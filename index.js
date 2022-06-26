@@ -22,11 +22,18 @@ h1.innerHTML = `${month} ${date}, ${year}`;
 
 function showTemperatureCurrent(response) {
   console.log(response);
+
+  temperatureCelsius = response.data.main.temp;
+
   let h3 = document.querySelector("#temperature");
   h3.innerHTML = Math.round(response.data.main.temp);
 
   document.querySelector("#city-Name").innerHTML = response.data.name;
   document.querySelector("#country-Name").innerHTML = response.data.sys.country;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("#weather-condition").innerHTML =
     response.data.weather[0].main;
   document
@@ -72,5 +79,26 @@ function getCurrentCity() {
 
 let currentCity = document.querySelector("#current-button");
 currentCity.addEventListener("click", getCurrentCity);
+
+function temperatureFahrenheitShow(event) {
+  event.preventDefault();
+  let h3 = document.querySelector("#temperature");
+  let temperatureFahrenheit = Math.round((temperatureCelsius * 9) / 5 + 32);
+  h3.innerHTML = temperatureFahrenheit;
+}
+
+function temperatureCelsiusFunction(event) {
+  event.preventDefault();
+  document.querySelector("#temperature").innerHTML =
+    Math.round(temperatureCelsius);
+}
+
+let temperatureCelsius = null;
+
+let temperatureFahrenheit = document.querySelector("#fahrenheit-link");
+temperatureFahrenheit.addEventListener("click", temperatureFahrenheitShow);
+
+let temperatureCelsiusShow = document.querySelector("#celsius-link");
+temperatureCelsiusShow.addEventListener("click", temperatureCelsiusFunction);
 
 cityShow("Costa Rica");
