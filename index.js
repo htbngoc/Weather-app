@@ -37,12 +37,7 @@ function showTemperatureCurrent(response) {
     );
 }
 
-function cityShow(event) {
-  event.preventDefault();
-  let heading = document.querySelector("#city-Input");
-  let cityName = document.querySelector("#city-Name");
-  cityName.innerHTML = heading.value;
-  let city = heading.value;
+function cityShow(city) {
   let apiKey = "d61b6cb1e9c414063f1d5c545d36fd21";
   let apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -53,8 +48,14 @@ function cityShow(event) {
   axios.get(apiUrl).then(showTemperatureCurrent);
 }
 
+function submitForm(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-Input");
+  cityShow(cityInputElement.value);
+}
+
 let formCity = document.querySelector("#search-city");
-formCity.addEventListener("submit", cityShow);
+formCity.addEventListener("submit", submitForm);
 
 function showPosition(position) {
   let lat = position.coords.latitude;
@@ -71,3 +72,5 @@ function getCurrentCity() {
 
 let currentCity = document.querySelector("#current-button");
 currentCity.addEventListener("click", getCurrentCity);
+
+cityShow("Costa Rica");
