@@ -141,6 +141,20 @@ function temperatureCelsiusFunction(event) {
     Math.round(temperatureCelsius);
 }
 
+function calgarySearch(event) {
+  event.preventDefault;
+  cityShow("Calgary");
+}
+
+function istanbulSearch(event) {
+  event.preventDefault;
+  cityShow("Istanbul");
+}
+function beijingSearch(event) {
+  event.preventDefault;
+  cityShow("Beijing");
+}
+
 let temperatureCelsius = null;
 
 let temperatureFahrenheit = document.querySelector("#fahrenheit-link");
@@ -148,6 +162,15 @@ temperatureFahrenheit.addEventListener("click", temperatureFahrenheitShow);
 
 let temperatureCelsiusShow = document.querySelector("#celsius-link");
 temperatureCelsiusShow.addEventListener("click", temperatureCelsiusFunction);
+
+let calgaryCity = document.querySelector("#calgary");
+calgaryCity.addEventListener("click", calgarySearch);
+
+let istanbulCity = document.querySelector("#istanbul");
+istanbulCity.addEventListener("click", istanbulSearch);
+
+let beijingCity = document.querySelector("#beijing");
+beijingCity.addEventListener("click", beijingSearch);
 
 cityShow("Costa Rica");
 displayForecast();

@@ -54,6 +54,13 @@ p {
   margin-right: 5px;
   text-decoration: none;
 }
+
+.favorite:hover {
+  text-decoration: underline;
+  color: green;
+  cursor: pointer;
+}
+
 .link {
   text-decoration: none;
   color: black;
