@@ -1,9 +1,4 @@
 body {
-  background: linear-gradient(
-    90deg,
-    rgb(52, 78, 65) 0%,
-    rgb(181, 201, 154) 100%
-  );
   background-image: url(img/wave2.jpeg);
   width: 100%;
 }
