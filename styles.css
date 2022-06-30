@@ -5,7 +5,7 @@ body {
 
 .content {
   display: block;
-  background: white;
+  background: rgb(248, 245, 238, 0.9);
   max-width: 600px;
   line-height: 50px;
   font-family: "Kdam Thmor Pro", sans-serif;
