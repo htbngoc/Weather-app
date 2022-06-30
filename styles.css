@@ -1,6 +1,8 @@
 body {
   background-image: url(img/wave2.jpeg);
   background-size: 100%;
+
+  background-repeat: no-repeat;
 }
 
 .content {
